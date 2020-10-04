@@ -28,7 +28,32 @@
 
 	<section class="hero">
 		<div class="background-image" style="background-image: url(hero.jpg);"></div>
-		<h1>Hello world!</h1>
+<script>
+var str = "РАЗ <br> ДВА <br> ТРИ";
+var splitted, i, delimiter = "<br>";
+function split(string) {
+    if (splitted === undefined) {
+        splitted = string.split(delimiter);
+        i = 0;
+    }
+    if (i in splitted) {
+        render(splitted[i]);
+        i += 1;
+        return true;
+    } else {
+        return false;
+    }
+}
+function render(string) {
+    document.body.innerHTML += "<p>" + string + "</p>";
+}
+var id = setInterval(function(){
+    if (!split(str)) {
+        clearInterval(id);
+    }
+}, 1000);
+</script>
+
 	</section>
 
 
