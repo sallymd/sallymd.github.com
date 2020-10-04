@@ -456,3 +456,12 @@ footer p a{
 @media (max-width: 1200px) {
 	#bsaHolder{ display:none;}
 }
+#example{padding:0px 0px 0px 100px;display:none;}
+#example .new{opacity: 0;}
+#example .div_opacity{
+  -webkit-transition: opacity .1s ease-in-out;
+  -moz-transition: opacity .1s ease-in-out;
+  -ms-transition: opacity .1s ease-in-out;
+  -o-transition: opacity .1s ease-in-out;
+  transition: opacity .1s ease-in-out;
+  opacity: 1;}
