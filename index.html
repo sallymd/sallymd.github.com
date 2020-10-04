@@ -26,35 +26,30 @@
 	</header>
 
 
-	<section class="hero">
-		<div id="Verse5" class="background-image" style="background-image: url(hero.jpg);", "display:block">
-<script>
-var str = "РАЗ <br> ДВА <br> ТРИ";
-var splitted, i, delimiter = "<br>";
-function split(string) {
-    if (splitted === undefined) {
-        splitted = string.split(delimiter);
-        i = 0;
-    }
-    if (i in splitted) {
-        render(splitted[i]);
-        i += 1;
-        return true;
-    } else {
-        return false;
-    }
-}
-function render(string) {
-    document.body.innerHTML += "<p>" + string + "</p>";
-}
-var id = setInterval(function(){
-    if (!split(str)) {
-        clearInterval(id);
-    }
-}, 1000);
+	<section class="example">
+<script type="text/javascript">
+$(document).ready(function(){
+ $.fn.animate_Text = function() {
+  var string = this.text();
+  return this.each(function(){
+   var $this = $(this);
+   $this.html(string.replace(/./g, '<span class="new">$&</span>'));
+   $this.find('span.new').each(function(i, el){
+    setTimeout(function(){ $(el).addClass('div_opacity'); }, 40 * i);
+   });
+  });
+ };
+ $('#example').show();
+ $('#example').animate_Text();
+});
 </script>
-</div>
-	</section>
+
+<div id="example">
+Тут Ваш текст, который будет появляться.
+Строка за строкой, с плавным эффектом.
+Все это возможно при помощи
+jQuery и CSS.</div>	
+</section>
 
 
 	<section class="our-work">
