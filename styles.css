@@ -155,7 +155,7 @@ header nav li:last-child{
  	Hero Section
 ----------------*/
 
-.hero{
+.example{
 	position: relative;
 	justify-content: center;
 	min-height: 100vh;
@@ -163,7 +163,7 @@ header nav li:last-child{
 	text-align: center;
 }
 
-.hero .background-image{
+.example .background-image{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -174,7 +174,7 @@ header nav li:last-child{
 	z-index: -1;
 }
 
-.hero .background-image:after{
+.example .background-image:after{
 	content: '';
 	position: absolute;
 	top: 0;
@@ -185,35 +185,35 @@ header nav li:last-child{
 	opacity: 0.75;
 }
 
-.hero h1{
+.example h1{
 	font: bold 60px 'Open Sans', sans-serif;
 	margin-bottom: 15px;
 }
 
-.hero h3{
+.example h3{
 	font: normal 28px 'Open Sans', sans-serif;
 	margin-bottom: 40px;
 }
 
-.hero a.btn{
+.example a.btn{
 	padding: 20px 46px;
 }
 
 @media (max-width: 800px){
 
-	.hero{
+	.example{
 		min-height: 600px;
 	}
 
-	.hero h1{
+	.example h1{
 		font-size: 48px;
 	}
 
-	.hero h3{
+	.example h3{
 		font-size: 24px;
 	}
 
-	.hero a.btn{
+	.example a.btn{
 		padding: 15px 40px;
 	}
 
