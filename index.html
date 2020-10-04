@@ -43,6 +43,17 @@ $(document).ready(function(){
  $('#example').animate_Text();
 });
 </script>
+<style type="text/css">
+#example{padding:0px 0px 0px 100px;display:none;}
+#example .new{opacity: 0;}
+#example .div_opacity{
+  -webkit-transition: opacity .1s ease-in-out;
+  -moz-transition: opacity .1s ease-in-out;
+  -ms-transition: opacity .1s ease-in-out;
+  -o-transition: opacity .1s ease-in-out;
+  transition: opacity .1s ease-in-out;
+  opacity: 1;}
+</style>
 
 <div id="example">
 Тут Ваш текст, который будет появляться.
